@@ -33,13 +33,13 @@ function live2D({ onSave, onCancel }: live2DProps): JSX.Element {
   return (
     <Stack {...settingStyles.common.container}>
       <SwitchField
-        label="Pointer Interactive"
+        label="指针交互"
         checked={modelInfo.pointerInteractive ?? false}
         onChange={(checked) => handleInputChange('pointerInteractive', checked)}
       />
 
       <SwitchField
-        label="Enable Scroll to Resize"
+        label="允许更改 Live2D 角色大小"
         checked={modelInfo.scrollToResize ?? true}
         onChange={(checked) => handleInputChange('scrollToResize', checked)}
       />

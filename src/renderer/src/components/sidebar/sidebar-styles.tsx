@@ -38,7 +38,7 @@ export const sidebarStyles = {
       top: 0,
       height: '100%',
       width: '440px',
-      bg: 'gray.900',
+      bg: '#a1c4fd',
       transform: isCollapsed
         ? 'translateX(calc(-100% + 24px))'
         : 'translateX(0)',
@@ -175,17 +175,17 @@ export const sidebarStyles = {
       mb: 4,
       p: 3,
       borderRadius: 'md',
-      bg: 'whiteAlpha.50',
+      bg: '#eff6ff',
       cursor: 'pointer',
       transition: 'all 0.2s',
       _hover: {
-        bg: 'whiteAlpha.100',
+        bg: '#a1c4fd',
       },
     },
     historyItemSelected: {
-      bg: 'whiteAlpha.200',
+      bg: '#a1c4fd',
       borderLeft: '3px solid',
-      borderColor: 'blue.500',
+      borderColor: 'red.300',
     },
     historyHeader: {
       display: 'flex',
@@ -195,7 +195,7 @@ export const sidebarStyles = {
     },
     timestamp: {
       fontSize: 'sm',
-      color: 'whiteAlpha.700',
+      color: 'rgba(0,0,0,0.3)',
       fontFamily: 'mono',
     },
     deleteButton: {
@@ -211,27 +211,28 @@ export const sidebarStyles = {
     },
     messagePreview: {
       fontSize: 'sm',
-      color: 'whiteAlpha.900',
+      color: '#262626',
       noOfLines: 2,
       overflow: 'hidden',
       textOverflow: 'ellipsis',
     },
     drawer: {
       content: {
-        background: 'var(--chakra-colors-gray-900)',
+        background: '#FFFFFF',
         maxWidth: '440px',
         marginTop: isElectron ? '30px' : '0',
         height: isElectron ? 'calc(100vh - 30px)' : '100vh',
       },
       title: {
-        color: 'white',
+        color: '#000000',
       },
       closeButton: {
-        color: 'white',
+        color: '#000000',
       },
       actionButton: {
-        color: 'white',
-        borderColor: 'white',
+        background: 'rgba(22,119,255,0.3)',
+        color: '#292929',
+        borderColor: 'rgba(22,119,255,0.2)',
         variant: 'outline' as const,
       },
     },
@@ -407,7 +408,7 @@ export const sidebarStyles = {
 
 export const chatPanelStyles = css`
   .cs-message-list {
-    background: var(--chakra-colors-gray-900) !important;
+    background: #f9fbff !important;
     padding: var(--chakra-space-4);
   }
   
@@ -417,10 +418,10 @@ export const chatPanelStyles = css`
   }
 
   .cs-message__content {
-    background-color: var(--chakra-colors-gray-700) !important;
+    background-color: #eff6ff !important;
     border-radius: var(--chakra-radii-md);
     padding: 8px !important;
-    color: var(--chakra-colors-white) !important;
+    color: #262626 !important;
     font-size: 0.95rem !important;
     line-height: 1.5 !important;
     margin-top: 4px !important;
@@ -431,7 +432,7 @@ export const chatPanelStyles = css`
   }
 
   .cs-message--outgoing .cs-message__content {
-    background-color: var(--chakra-colors-gray-600) !important;
+    background-color: #eff6ff !important;
   }
 
   .cs-chat-container {
@@ -464,7 +465,7 @@ export const chatPanelStyles = css`
 
   .cs-avatar {
     background-color: var(--chakra-colors-blue-500) !important;
-    color: white !important;
+    color: #262626 !important;
     width: 28px !important;
     height: 28px !important;
     font-size: 14px !important;
@@ -475,7 +476,7 @@ export const chatPanelStyles = css`
   }
 
   .cs-message--outgoing .cs-avatar {
-    background-color: var(--chakra-colors-green-500) !important;
+    background-color: #eff6ff !important;
   }
 
   .cs-message__header {

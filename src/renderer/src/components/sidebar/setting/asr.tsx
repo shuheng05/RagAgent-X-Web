@@ -39,25 +39,25 @@ function ASR({ onSave, onCancel }: ASRProps): JSX.Element {
   return (
     <Stack {...settingStyles.common.container}>
       <SwitchField
-        label="Auto Stop Mic When AI Start Speaking"
+        label="AI 开始说话时自动停止麦克风"
         checked={autoStopMic}
         onChange={setAutoStopMic}
       />
 
       <SwitchField
-        label="Auto Start Mic When Conversation End"
+        label="对话结束时自动启动麦克风"
         checked={autoStartMicOnConvEnd}
         onChange={setAutoStartMicOnConvEnd}
       />
 
       <SwitchField
-        label="Auto Start Mic When AI Interrupted"
+        label="AI 中断时自动启动麦克风"
         checked={autoStartMicOn}
         onChange={setAutoStartMicOn}
       />
 
       <NumberField
-        label="Speech Prob Threshold"
+        label="语音概率阈值"
         value={localSettings.positiveSpeechThreshold}
         onChange={(value) => handleInputChange('positiveSpeechThreshold', value)}
         min={1}
@@ -65,7 +65,7 @@ function ASR({ onSave, onCancel }: ASRProps): JSX.Element {
       />
 
       <NumberField
-        label="Negative Speech Threshold"
+        label="负语音阈值"
         value={localSettings.negativeSpeechThreshold}
         onChange={(value) => handleInputChange('negativeSpeechThreshold', value)}
         min={0}
@@ -73,7 +73,7 @@ function ASR({ onSave, onCancel }: ASRProps): JSX.Element {
       />
 
       <NumberField
-        label="Redemption Frames"
+        label="兑换帧"
         value={localSettings.redemptionFrames}
         onChange={(value) => handleInputChange('redemptionFrames', value)}
         min={1}

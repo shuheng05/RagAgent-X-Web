@@ -96,7 +96,7 @@ const MessageInput = memo(({
         onKeyDown={onKeyDown}
         onCompositionStart={onCompositionStart}
         onCompositionEnd={onCompositionEnd}
-        placeholder="Type your message..."
+        placeholder="跟 RagAgent X 聊天吧"
         {...footerStyles.footer.input}
       />
     </Box>

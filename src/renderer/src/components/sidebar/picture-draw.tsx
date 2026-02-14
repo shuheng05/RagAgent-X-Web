@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Card, Col, Drawer, Row, Image } from 'antd';
+import {Card, Col, Drawer, Row, Image } from 'antd';
 import Meta from 'antd/es/card/Meta';
+import {Button} from "@chakra-ui/react";
 
 
 // 初始化每个分类的图片
@@ -80,8 +81,8 @@ const PictureDraw: React.FC = () => {
 
     return (
         <>
-            <Button type="primary" onClick={showDrawer}>
-                picture
+            <Button style={{ backgroundColor: '#eff6ff', color: '#262626' }} onClick={showDrawer}>
+                校园风光
             </Button>
             <Drawer title="school picture" onClose={onClose} open={open} size="large">
                 <Card

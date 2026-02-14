@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card, Col, Drawer, Row, message } from 'antd';
+import { Card, Col, Drawer, Row, message } from 'antd';
+import { Button } from "@chakra-ui/react";
 
 interface Voice {
     title: string;
@@ -38,6 +39,8 @@ const ChangeSpeech: React.FC = () => {
         try {
             const { ref_audio_path, prompt_text, gpt_weights, sovits_weights } = voice;
 
+            message.loading({ content: '正在切换语音配置...', key: 'switching', duration: 0 });
+
             const updateConfig = fetch('/api/update-gpt-sovits-config', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -70,20 +73,20 @@ const ChangeSpeech: React.FC = () => {
                 throw new Error('部分请求失败');
             }
 
-            message.success('语音配置切换成功！');
+            message.success({ content: '语音配置切换成功！', key: 'switching' });
         } catch (error) {
             console.error(error);
-            message.error('语音配置失败');
+            message.error({ content: '语音配置失败', key: 'switching' });
         }
     };
 
 
     return (
         <>
-            <Button type="primary" onClick={showDrawer}>
-                Select your favourite voice
+            <Button onClick={showDrawer} style={{ backgroundColor: '#eff6ff', color: '#262626' }}>
+                更换语音
             </Button>
-            <Drawer title="Select your favourite voice" onClose={onClose} open={open} width='80%'>
+            <Drawer title="选择你喜欢的声音" onClose={onClose} open={open} width="80%">
                 <Row gutter={[32, 32]}>
                     {voices.map((voice, index) => (
                         <Col span={8} key={index}>
@@ -91,11 +94,14 @@ const ChangeSpeech: React.FC = () => {
                                 title={voice.title}
                                 hoverable
                                 style={{ width: '100%' }}
-                                actions={[<Button type="primary"
-                                                  onClick={() => handleCardClick(voice)}
-                                >
-                                    切换为该语音
-                                </Button>]}
+                                actions={[
+                                    <Button
+                                        style={{ backgroundColor: '#a1c4fd', color: '#262626' }}
+                                        onClick={() => handleCardClick(voice)}
+                                    >
+                                        切换为该语音
+                                    </Button>
+                                ]}
                             >
                                 <audio controls src={voice.audio_url} style={{ width: '100%' }} />
                             </Card>

@@ -19,14 +19,14 @@ function Agent({ onSave, onCancel }: AgentProps): JSX.Element {
   return (
     <Stack {...settingStyles.common.container}>
       <SwitchField
-        label="Allow AI to Speak Proactively"
+        label="让 AI 主动说话"
         checked={settings.allowProactiveSpeak}
         onChange={handleAllowProactiveSpeakChange}
       />
 
       {settings.allowProactiveSpeak && (
         <NumberField
-          label="Idle seconds allow AI to speak"
+          label="空闲秒数允许 AI 说话"
           value={settings.idleSecondsToSpeak}
           onChange={(value) => handleIdleSecondsChange(Number(value))}
           min={0}
@@ -36,7 +36,7 @@ function Agent({ onSave, onCancel }: AgentProps): JSX.Element {
       )}
 
       <SwitchField
-        label="Prompt AI to Speak via Raise Hand Button"
+        label="通过打断按钮提示 AI 说话"
         checked={settings.allowButtonTrigger}
         onChange={handleAllowButtonTriggerChange}
       />

@@ -91,7 +91,7 @@ function HistoryDrawer({ children }: HistoryDrawerProps): JSX.Element {
       <DrawerContent style={sidebarStyles.historyDrawer.drawer.content}>
         <DrawerHeader>
           <DrawerTitle style={sidebarStyles.historyDrawer.drawer.title}>
-            Chat History List
+            聊天记录
           </DrawerTitle>
           <DrawerCloseTrigger style={sidebarStyles.historyDrawer.drawer.closeButton} />
         </DrawerHeader>

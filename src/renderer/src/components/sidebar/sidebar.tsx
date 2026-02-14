@@ -1,17 +1,18 @@
 /* eslint-disable react/require-default-props */
 import { Box, Button } from '@chakra-ui/react';
 import {
-  FiSettings, FiClock, FiPlus, FiChevronLeft, FiUsers,
+  FiSettings, FiClock, FiPlus, FiChevronLeft,
 } from 'react-icons/fi';
 import { memo } from 'react';
 import { sidebarStyles } from './sidebar-styles';
 import SettingUI from './setting/setting-ui';
 import ChatHistoryPanel from './chat-history-panel';
-import BottomTab from './bottom-tab';
+// import BottomTab from './bottom-tab';
 import HistoryDrawer from './history-drawer';
 import { useSidebar } from '@/hooks/sidebar/use-sidebar';
-import GroupDrawer from './group-drawer';
+// import GroupDrawer from './group-drawer';
 import ChangeSpeech from "./change-speech";
+import PictureDraw from "./picture-draw";
 
 // Type definitions
 interface SidebarProps {
@@ -44,26 +45,28 @@ ToggleButton.displayName = 'ToggleButton';
 
 const HeaderButtons = memo(({ onSettingsOpen, onNewHistory }: HeaderButtonsProps) => (
   <Box display="flex" gap={1}>
-    <Button onClick={onSettingsOpen}>
+    <Button style={{backgroundColor: '#eff6ff', color: '#262626'}} onClick={onSettingsOpen}>
       <FiSettings />
     </Button>
 
-    <GroupDrawer>
-      <Button>
-        <FiUsers />
-      </Button>
-    </GroupDrawer>
+    {/*<GroupDrawer>*/}
+    {/*  <Button>*/}
+    {/*    <FiUsers />*/}
+    {/*  </Button>*/}
+    {/*</GroupDrawer>*/}
 
     <HistoryDrawer>
-      <Button>
+      <Button style={{backgroundColor: '#eff6ff', color: '#262626'}}>
         <FiClock />
       </Button>
     </HistoryDrawer>
 
-    <Button onClick={onNewHistory}>
+    <Button onClick={onNewHistory} style={{backgroundColor: '#eff6ff', color: '#262626'}}>
       <FiPlus />
     </Button>
     <ChangeSpeech/>
+
+    <PictureDraw/>
 
 
   </Box>
@@ -80,7 +83,7 @@ const SidebarContent = memo(({ onSettingsOpen, onNewHistory }: HeaderButtonsProp
       />
     </Box>
     <ChatHistoryPanel />
-    <BottomTab />
+    {/*<BottomTab />*/}
   </Box>
 ));
 

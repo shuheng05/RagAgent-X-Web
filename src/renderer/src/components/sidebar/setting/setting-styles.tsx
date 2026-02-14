@@ -41,12 +41,12 @@ export const settingStyles = {
       },
       content: {},
       trigger: {
-        color: 'whiteAlpha.600',
+        color: '#000000',
         _selected: {
-          color: 'white',
+          color: '#1677ff',
         },
         _hover: {
-          color: 'white',
+          color: 'rgba(22,119,255,0.6)',
         },
       },
       list: {
@@ -70,7 +70,7 @@ export const settingStyles = {
       borderColor: 'whiteAlpha.200',
     },
     drawerContent: {
-      bg: 'gray.900',
+      bg: '#FFFFFF',
       maxWidth: '440px',
       height: isElectron ? 'calc(100vh - 30px)' : '100vh',
       borderLeft: '1px solid',
@@ -86,7 +86,7 @@ export const settingStyles = {
       py: 4,
     },
     drawerTitle: {
-      color: 'white',
+      color: '#000000',
       fontSize: 'lg',
       fontWeight: 'semibold',
     },
@@ -106,20 +106,22 @@ export const settingStyles = {
     },
     field: {
       label: {
-        color: 'whiteAlpha.800',
+        color: '#000000',
       },
     },
     select: {
       root: {
-        colorPalette: 'gray',
-        bg: 'gray.800',
+        colorPalette: '#1677ff',
+        bg: '#1677ff',
       },
       trigger: {
-        bg: 'gray.800',
+        bg: 'rgba(255,255,255,0.9)',
+        color: '#000000',
       },
     },
     input: {
-      bg: 'gray.800',
+      bg: 'rgba(255,255,255,0.9)',
+      color: '#000000',
     },
     buttonGroup: {
       gap: 4,
@@ -145,7 +147,7 @@ export const settingStyles = {
     },
     fieldLabel: {
       fontSize: 'sm',
-      color: 'whiteAlpha.800',
+      color: '#000000',
       whiteSpace: 'nowrap' as const,
     },
     switch: {
@@ -159,10 +161,11 @@ export const settingStyles = {
         inputMode: 'decimal' as const,
       },
       input: {
-        bg: 'whiteAlpha.100',
-        borderColor: 'whiteAlpha.200',
+        bg: 'rgba(66, 153, 225, 0.1)',
+        color: '#000000',
+        borderColor: 'rgba(22,119,255,0.2)',
         _hover: {
-          bg: 'whiteAlpha.200',
+          bg: 'rgba(22,119,255,0.2)',
         },
       },
     },

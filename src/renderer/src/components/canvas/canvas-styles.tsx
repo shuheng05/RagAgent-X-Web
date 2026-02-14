@@ -42,7 +42,7 @@ export const canvasStyles = {
       bottom: '30px',
       left: '50%',
       transform: 'translateX(-50%)',
-      backgroundColor: 'rgba(0, 0, 0, 0.7)',
+      backgroundColor: '#eff6ff',
       padding: '15px 30px',
       borderRadius: '12px',
       minWidth: '60%',
@@ -50,7 +50,7 @@ export const canvasStyles = {
       zIndex: 2,
     },
     text: {
-      color: 'white',
+      color: 'rgba(0,0,0,0.3)',
       fontSize: '1.5rem',
       textAlign: 'center',
       lineHeight: '1.4',

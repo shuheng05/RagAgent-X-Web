@@ -3,8 +3,14 @@ import React, { useContext, useCallback } from 'react';
 import { wsService } from '@/services/websocket-service';
 import { useLocalStorage } from '@/hooks/utils/use-local-storage';
 
-const DEFAULT_WS_URL = 'ws://127.0.0.1:12393/client-ws';
-const DEFAULT_BASE_URL = 'http://127.0.0.1:12393';
+// 动态生成 URL
+const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+const dynamicWsUrl = `${protocol}//${window.location.host}/client-ws`;
+const dynamicBaseUrl = `${window.location.protocol}//${window.location.host}`;
+
+// 默认 URL
+const DEFAULT_WS_URL = dynamicWsUrl;
+const DEFAULT_BASE_URL = dynamicBaseUrl;
 
 export interface HistoryInfo {
   uid: string;

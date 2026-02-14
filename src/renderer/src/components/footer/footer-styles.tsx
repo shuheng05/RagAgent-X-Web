@@ -19,7 +19,7 @@ export const footerStyles: {
 } = {
   footer: {
     container: (isCollapsed) => ({
-      bg: isCollapsed ? 'transparent' : 'gray.800',
+      bg: isCollapsed ? 'transparent' : '#a1c4fd',
       borderTopRadius: isCollapsed ? 'none' : 'lg',
       transform: isCollapsed ? 'translateY(calc(100% - 24px))' : 'translateY(0)',
       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -46,20 +46,20 @@ export const footerStyles: {
       minW: '50px',
     },
     input: {
-      bg: 'gray.700',
+      bg: '#eff6ff',
       border: 'none',
       height: '80px',
       borderRadius: '12px',
       fontSize: '18px',
       pl: '12',
       pr: '4',
-      color: 'whiteAlpha.900',
+      color: '#262626',
       _placeholder: {
-        color: 'whiteAlpha.500',
+        color: 'rgba(0,0,0,0.3)',
       },
       _focus: {
         border: 'none',
-        bg: 'gray.700',
+        bg: '#eff6ff',
       },
       resize: 'none',
       minHeight: '80px',
@@ -75,11 +75,11 @@ export const footerStyles: {
       left: '1',
       top: '50%',
       transform: 'translateY(-50%)',
-      color: 'whiteAlpha.700',
+      color: 'rgba(0,0,0,0.3)',
       zIndex: 2,
       _hover: {
         bg: 'transparent',
-        color: 'white',
+        color: 'rgba(0,0,0,0.3)',
       },
     },
   },

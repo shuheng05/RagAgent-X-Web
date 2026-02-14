@@ -154,7 +154,7 @@ export function InputSubtitle({ isPet = false }: InputSubtitleProps) {
               onKeyDown={handleKeyPress}
               onCompositionStart={handleCompositionStart}
               onCompositionEnd={handleCompositionEnd}
-              placeholder="Type your message..."
+              placeholder="跟 RagAgent X 聊天"
               {...inputSubtitleStyles.input}
             />
             <Button

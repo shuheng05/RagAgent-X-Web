@@ -101,11 +101,11 @@ function SettingUI({ open, onClose }: SettingUIProps): JSX.Element {
       <DrawerContent {...settingStyles.settingUI.drawerContent}>
         <DrawerHeader {...settingStyles.settingUI.drawerHeader}>
           <DrawerTitle {...settingStyles.settingUI.drawerTitle}>
-            Settings
+            设置
           </DrawerTitle>
           <div {...settingStyles.settingUI.closeButton}>
             <DrawerCloseTrigger asChild onClick={handleCancel}>
-              <CloseButton size="sm" color="white" />
+              <CloseButton size="sm" color="rgba(66, 153, 225, 0.6" />
             </DrawerCloseTrigger>
           </div>
         </DrawerHeader>
@@ -122,7 +122,7 @@ function SettingUI({ open, onClose }: SettingUIProps): JSX.Element {
                 value="general"
                 {...settingStyles.settingUI.tabs.trigger}
               >
-                General
+                通用
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="live2d"
@@ -134,26 +134,26 @@ function SettingUI({ open, onClose }: SettingUIProps): JSX.Element {
                 value="asr"
                 {...settingStyles.settingUI.tabs.trigger}
               >
-                ASR
+                语音识别
               </Tabs.Trigger>
-              <Tabs.Trigger
-                value="tts"
-                {...settingStyles.settingUI.tabs.trigger}
-              >
-                TTS
-              </Tabs.Trigger>
+              {/*<Tabs.Trigger*/}
+              {/*  value="tts"*/}
+              {/*  {...settingStyles.settingUI.tabs.trigger}*/}
+              {/*>*/}
+              {/*  语音合成*/}
+              {/*</Tabs.Trigger>*/}
               <Tabs.Trigger
                 value="agent"
                 {...settingStyles.settingUI.tabs.trigger}
               >
-                Agent
+                大模型
               </Tabs.Trigger>
-              <Tabs.Trigger
-                value="about"
-                {...settingStyles.settingUI.tabs.trigger}
-              >
-                About
-              </Tabs.Trigger>
+              {/*<Tabs.Trigger*/}
+              {/*  value="about"*/}
+              {/*  {...settingStyles.settingUI.tabs.trigger}*/}
+              {/*>*/}
+              {/*  About*/}
+              {/*</Tabs.Trigger>*/}
             </Tabs.List>
 
             {tabsContent}

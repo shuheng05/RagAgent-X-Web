@@ -15,6 +15,8 @@ import { useChatHistory } from '@/context/chat-history-context';
 import { Global } from '@emotion/react';
 import { useConfig } from '@/context/character-config-context';
 import { useWebSocket } from '@/context/websocket-context';
+import favicon from '../../../public/favicon.ico'
+import {Image} from "antd";
 
 // Type definitions
 interface MessageListProps {
@@ -79,23 +81,26 @@ function ChatHistoryPanel(): JSX.Element {
     <Box
       h="full"
       overflow="hidden"
-      bg="gray.900"
+      bg="#a1c4fd"
     >
       <Global styles={chatPanelStyles} />
       <MainContainer>
         <ChatContainer>
           <ChatMessageList>
             {validMessages.length === 0 ? (
+
               <Box
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
                 height="100%"
-                color="whiteAlpha.500"
+                color="#262626"
                 fontSize="sm"
               >
-                No messages yet. Start a conversation!
+                很高兴认识你, 和我聊天吧！
+                <Image src={favicon} alt="favicon" width={24}/>
               </Box>
+
             ) : (
               validMessages.map((msg) => (
                 <ChatMessage

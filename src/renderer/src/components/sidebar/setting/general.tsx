@@ -73,22 +73,22 @@ function General({ onSave, onCancel }: GeneralProps): JSX.Element {
 
   return (
     <Stack {...settingStyles.common.container}>
-      <SelectField
-        label="Language"
-        value={settings.language}
-        onChange={(value) => handleSettingChange('language', value)}
-        collection={collections.languages}
-        placeholder="Select language"
-      />
+      {/*<SelectField*/}
+      {/*  label="Language"*/}
+      {/*  value={settings.language}*/}
+      {/*  onChange={(value) => handleSettingChange('language', value)}*/}
+      {/*  collection={collections.languages}*/}
+      {/*  placeholder="Select language"*/}
+      {/*/>*/}
 
       <SwitchField
-        label="Use Camera Background"
+        label="使用相机背景"
         checked={settings.useCameraBackground}
         onChange={handleCameraToggle}
       />
 
       <SwitchField
-        label="Show Subtitle"
+        label="显示字幕"
         checked={showSubtitle}
         onChange={setShowSubtitle}
       />
@@ -96,43 +96,43 @@ function General({ onSave, onCancel }: GeneralProps): JSX.Element {
       {!settings.useCameraBackground && (
         <>
           <SelectField
-            label="Background Image"
+            label="背景图像"
             value={settings.selectedBgUrl}
             onChange={(value) => handleSettingChange('selectedBgUrl', value)}
             collection={collections.backgrounds}
-            placeholder="Select from available backgrounds"
+            placeholder="从可用背景中选择"
           />
 
           <InputField
-            label="Or enter a custom background URL"
+            label="或输入自定义背景 URL"
             value={settings.customBgUrl}
             onChange={(value) => handleSettingChange('customBgUrl', value)}
-            placeholder="Enter image URL"
+            placeholder="输入图像 URL"
           />
         </>
       )}
 
       <SelectField
-        label="Character Preset"
+        label="角色预设"
         value={settings.selectedCharacterPreset}
         onChange={handleCharacterPresetChange}
         collection={collections.characterPresets}
-        placeholder={confName || 'Select character preset'}
+        placeholder={confName || '选择角色预设'}
       />
 
-      <InputField
-        label="WebSocket URL"
-        value={settings.wsUrl}
-        onChange={(value) => handleSettingChange('wsUrl', value)}
-        placeholder="Enter WebSocket URL"
-      />
+      {/*<InputField*/}
+      {/*  label="WebSocket URL"*/}
+      {/*  value={settings.wsUrl}*/}
+      {/*  onChange={(value) => handleSettingChange('wsUrl', value)}*/}
+      {/*  placeholder="Enter WebSocket URL"*/}
+      {/*/>*/}
 
-      <InputField
-        label="Base URL"
-        value={settings.baseUrl}
-        onChange={(value) => handleSettingChange('baseUrl', value)}
-        placeholder="Enter Base URL"
-      />
+      {/*<InputField*/}
+      {/*  label="Base URL"*/}
+      {/*  value={settings.baseUrl}*/}
+      {/*  onChange={(value) => handleSettingChange('baseUrl', value)}*/}
+      {/*  placeholder="Enter Base URL"*/}
+      {/*/>*/}
     </Stack>
   );
 }
